@@ -1,0 +1,14 @@
+-- fernagym.sql
+CREATE DATABASE IF NOT EXISTS fernagym CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+USE fernagym;
+
+CREATE TABLE IF NOT EXISTS inscripciones (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(100) NOT NULL,
+    rut VARCHAR(20) NOT NULL,
+    email VARCHAR(100) NOT NULL,
+    telefono VARCHAR(30) NOT NULL,
+    plan VARCHAR(50) NOT NULL,
+    comprobante VARCHAR(255) NOT NULL,
+    fecha TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
